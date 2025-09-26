@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}ادفارد{% endblock %}</title>
+
+    <!-- الخط Tajawal -->
+    <link rel="stylesheet" href="{% static 'fonts/tajawal.css' %}">
+
+    <!-- أيقونات Remixicon -->
+    <link rel="stylesheet" href="{% static 'fonts/remixicon.css' %}">
+
+    <!-- ملفات CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">  <!-- إذا عندك ملف إضافي -->
+
+    <!-- صورة الشعار -->
+    <link rel="icon" href="{% static 'images/hed.jpg' %}">  <!-- تأكد من اسم الصورة ومكانها -->
+
+    <!-- إعدادات تجاوب -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+
+<!-- الهيدر -->
+<header id="home">
+    <img src="{% static 'images/White Logo.svg' %}" alt="شعار ادفارد">
+
+    <nav>
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-menu" id="navMenu" style="list-style: none; display: flex; gap: 20px; align-items: center;">
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#about">من نحن</a></li>
+            <li><a href="#projects">أعمالنا</a></li>
+        </ul>
+    </nav>
+
+    <!-- النص التسويقي -->
+    <div class="hero-text" style="margin-top: 80px; text-align: center;">
+        <h1 class="hero-title">
+            نحن نصنع الفرق في عالم الأعمال
+        </h1>
+
+
+        <p style="font-size: 20px; color: #007cb6; margin-top: 10px; margin-bottom: 30px;">
+            حلول إبداعية، تنفيذ احترافي، وتجربة مستخدم لا تُنسى — هذا هو أدفارد.
+        </p>
+
+        <a href="#contact" class="neon-btn" style="display: inline-block;">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            تواصل معنا
+        </a>
+    </div>
+</header>
+
+    <!-- المحتوى الرئيسي -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>© 2025 ادفارد. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <!-- ملفات JavaScript -->
+    <script src="{% static 'js/main.js' %}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>
