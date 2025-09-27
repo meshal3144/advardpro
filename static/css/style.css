@@ -1351,9 +1351,12 @@ button:hover {
     }
 
     .project-card {
-        width: 280px;   /* حجم أصغر مناسب للجوال */
-        height: 350px;  /* تقليل الارتفاع */
+        width: 100%;         /* يملى الشاشة أو المساحة */
+        max-width: 320px;    /* حد أقصى للعرض */
+        height: auto;        /* يخلي البطاقة تتمدد حسب النص */
+        min-height: 400px;   /* ضمان شكل مقبول */
     }
+
 
     .card-front img {
         max-width: 100%;
