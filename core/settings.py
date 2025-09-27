@@ -9,7 +9,17 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "insecure-key")
 
 DEBUG = os.environ.get("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost").split(",")
+# ALLOWED_HOSTS: دعم المحلي + Render
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS")
+
+if ALLOWED_HOSTS:
+    # لو موجود env ALLOWED_HOSTS → استخدمه (في Render)
+    ALLOWED_HOSTS = ALLOWED_HOSTS.split(",")
+else:
+    # لو ما فيه env (محلي) → خلي localhost و 127.0.0.1 مسموحة
+    ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+
+
 
 
 # Application definition
