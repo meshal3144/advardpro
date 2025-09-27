@@ -72,11 +72,52 @@
 
     <!-- الفوتر -->
     <footer>
-        <p>© 2025 ادفارد. جميع الحقوق محفوظة.</p>
+        <div class="footer-top">
+            <!-- صور التراخيص -->
+            <div class="footer-certificates">
+                <img src="{% static 'images/freelance_logo_white.svg' %}" alt="شعار العمل الحر">
+                <img src="{% static 'images/logods1.svg' %}" alt="شهادة / وثيقة">
+                <p>رقم الوثيقة: FL-259323678</p>
+            </div>
+
+            <!-- روابط التواصل الاجتماعي -->
+            <div class="footer-social">
+                    <!-- whatsapp-->
+                <a href="https://wa.me/message/KUBMSWISHYX7D1" target="_blank" rel="noopener noreferrer">
+                    <i class="ri-whatsapp-line"></i>
+                </a>
+
+                    <!-- instagram-->
+                <a href="https://www.instagram.com/advard_10/" target="_blank" rel="noopener noreferrer">
+                    <i class="ri-instagram-line"></i>
+                </a>
+
+                    <!-- youtube-->
+                <a href="https://www.youtube.com/@advard100" target="_blank" rel="noopener noreferrer">
+                    <i class="ri-youtube-line"></i>
+                </a>
+
+                    <!-- github-->
+                <a href="https://github.com/advardsystem" target="_blank" rel="noopener noreferrer">
+                    <i class="ri-github-line"></i>
+                </a>
+
+                    <!-- telegram-->
+                <a href="https://t.me/advardsystem" target="_blank" rel="noopener noreferrer">
+                    <i class="ri-telegram-2-line"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 ادفارد. جميع الحقوق محفوظة.</p>
+        </div>
     </footer>
+
 
     <!-- ملفات JavaScript -->
     <script src="{% static 'js/main.js' %}"></script>
     {% block scripts %}{% endblock %}
 </body>
 </html>
+

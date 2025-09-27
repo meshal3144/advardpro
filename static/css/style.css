@@ -271,14 +271,91 @@ header nav a:hover::after {
 
 
 /* الفوتر */
+/* الفوتر العام */
 footer {
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     background: linear-gradient(135deg, #06030E 0%, #06030E 100%);
-    color: #fff; /* نص أبيض */
-    text-align: center;
-    padding: 1rem 2rem;
-    margin-top: auto; /* في أسفل الصفحة */
+    color: #fff;
+    padding: 1.5rem 2rem;
+    margin-top: auto;
+    font-family: "Tajawal", sans-serif;
 }
+
+/* القسم العلوي */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* عشان الجوال */
+    margin-bottom: 1rem;
+}
+
+/* صور التراخيص */
+.footer-certificates {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-certificates img {
+    height: 40px;
+    object-fit: contain;
+}
+
+.footer-certificates p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+/* أيقونات السوشال */
+.footer-social {
+    display: flex;
+    gap: 15px;
+    text-decoration: none !important;
+
+}
+
+.footer-social a {
+    color: #d2f5fd;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #007b8b; /* لون عند المرور */
+    text-decoration: none !important;
+
+}
+
+/* القسم السفلي */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* ميديا للجوال */
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-certificates {
+        justify-content: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
+
 
 
 /* إضافات عامة للروابط والأزرار في الصفحة */
@@ -630,7 +707,7 @@ button:hover {
 }
 
 .project-card {
-    height: 400px;
+    height: 550px;
     perspective: 1000px;
     flex-shrink: 0; /* مهم علشان ما يتقلص */
     width: 500px; /* الحجم الثابت للبطاقة */
@@ -715,7 +792,7 @@ button:hover {
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
     transform: rotateY(180deg);
-    padding: 30px;
+    padding: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -932,8 +1009,8 @@ button:hover {
 
 .floating-element {
     position: absolute;
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     background: linear-gradient(135deg, #0C0B1D, #caecf873);
     border-radius: 50%;
     display: flex;
@@ -970,7 +1047,7 @@ button:hover {
 
 .connection-line {
     position: absolute;
-    width: 2px;
+    width: 3px;
     height: 200px;
     background: linear-gradient(transparent, #00d4ff, transparent);
     animation: lineGlow 2s ease-in-out infinite;
@@ -1352,7 +1429,6 @@ button:hover {
 
     .project-card {
         width: 100%;         /* يملى الشاشة أو المساحة */
-        max-width: 320px;    /* حد أقصى للعرض */
         height: auto;        /* يخلي البطاقة تتمدد حسب النص */
         min-height: 400px;   /* ضمان شكل مقبول */
     }
